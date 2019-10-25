@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link href="https://fonts.googleapis.com/css?family=Niramit&display=swap" rel="stylesheet">
+	<title>Computational Mathematics</title>
+	{% load static %}
+	<!-- Bootstrap core CSS -->
+	<link href="{% static 'myapp/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+	<!-- Custom fonts for this template -->
+	<link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+	<link href="{% static 'myapp/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+
+	<!-- Custom styles for this template -->
+	<link href="{% static 'myapp/css/resume.min.css' %}" rel="stylesheet">
+
+</head>
+<style>
+	body {
+		font-family: 'Niramit', sans-serif;
+	}
+</style>
+
+<body id="page-top">
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+		<a class="navbar-brand js-scroll-trigger" href="#page-top">
+			<span class="d-block d-lg-none">Computational Mathematics
+			</span>
+			<span class="d-none d-lg-block">
+				<img class="img-fluid img-profile rounded-circle mx-auto mb-2"
+					src="{% static 'myapp/images/profile.jpg' %}" alt="">
+			</span>
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link js-scroll-trigger" href="#about">About</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link js-scroll-trigger" href="#Differentiation">Differentiation</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link js-scroll-trigger" href="#Integration">Integration</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link js-scroll-trigger" href="#Root-finding">Root-finding</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="container-fluid p-0">
+
+		<section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
+			<div class="w-100">
+				<h1 class="mb-0">Computational
+					<span class="text-primary">Mathematics</span>
+				</h1>
+				<div class="subheading mb-5">UBU
+					<a href="saranporn.ph..60@ubu.ac.th">saranporn.ph.60@ubu.ac.th</a>
+				</div>
+				<p class="lead mb-5">I am study Computer Science at UBU.</p>
+				<div class="social-icons">
+					<a href="#">
+						<i class="fab fa-linkedin-in"></i>
+					</a>
+					<a href="#">
+						<i class="fab fa-github"></i>
+					</a>
+					<a href="#">
+						<i class="fab fa-twitter"></i>
+					</a>
+					<a href="#">
+						<i class="fab fa-facebook-f"></i>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<hr class="m-0">
+
+		<section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="Differentiation">
+			<div class="w-100">
+				<h2 class="mb-5">Differentiation</h2>
+				<div class="container">
+					<section class="headline-sec">
+						<div class="overlay center">
+							<h3>Differentiation หาค่าประมาณของฟังก์ชั่น</h3>
+						</div><br /><br />
+					</section>
+				</div>
+				<section>
+					<div class="container">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="alert alert-secondary">
+									<div class="form-group">
+										<strong>กรอกข้อมูลต่อไปนี้</strong> <br /><br />
+										<form action='Differentiation' method="post">
+											{% csrf_token %}
+											เลือกฟังก์ชั่น
+											<select class="form-control" name=function>
+												<option value="taylorseries">Taylor Series</option>
+											</select>
+											ค่าประมาณของฟังก์ชั่น
+											<input name="fx" type="text" step=any class="form-control"
+												placeholder="e**x" value="e**x">
+											x
+											<input name="x" type="number" step=any class="form-control" placeholder="0"
+												value="0">
+											h
+											<input name="h" type="number" step=any class="form-control"
+												placeholder="0.001" value="0.001"><br /><br />
+											<input type="submit" class="btn btn-light"></input>
+										</form>
+									</div>
+								</div>
+							</div>
+							<center>
+								<div class="col-md-6">
+									<h2><strong> ผลลัพธ์ </strong></h2>
+									re1
+									<h4>{{re1}}</h4>
+									re2
+									<h4>{{re2}}</h4>
+									re3
+									<h4>{{re3}}</h4>
+									re4
+									<h4>{{re4}}</h4>
+								</div>
+							</center>
+						</div>
+					</div>
+				</section>
+			</div>
+
+		</section>
+
+		<hr class="m-0">
+
+		<section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="Integration">
+			<div class="w-100">
+				<h2 class="mb-5">Integration</h2>
+				<center>
+					<section class="headline-sec container">
+						<div class="overlay ">
+							<h3>Integration หาพื้นที่ใต้กราฟ</h3>
+						</div>
+					</section>
+				</center><br>
+				<!--HOME SECTION END-->
+				<section>
+					<div class="container">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="alert alert-secondary">
+									<div class="form-group">
+										<strong>กรอกข้อมูลต่อไปนี้</strong><br />
+
+										<label></label>
+										<form action='Integration' method="post">
+											{% csrf_token %}
+											เลือกฟังก์ชั่น
+											<select class="form-control" name='Integration'>
+												<option value="trapezoidal">Trapezoidal Rule</option>
+												<option value="simson">Simpson's Rule</option>
+											</select>
+											ฟังก์ชั่น
+											<input name="fx" type="text" step=any class="form-control"
+												placeholder="e**x" value="e**x">
+											<br>
+											<input type="submit" class="btn btn-light"></input>
+										</form>
+									</div>
+								</div>
+							</div>
+							<center>
+								<div class="col-md-6">
+									<h2><strong> ผลลัพธ์ </strong></h2>
+									<h4>{{x1}}</h4>
+								</div>
+							</center>
+
+						</div>
+					</div>
+				</section>
+		</section>
+
+		<hr class="m-0">
+
+		<section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="Root-finding">
+			<div class="w-100">
+				<h2 class="mb-5">Root-finding</h2>
+
+				<center>
+					<section class="headline-sec">
+						<div class="overlay ">
+							<h3>Root-finding หาจุดสูงสุดหรือต่ำสุดของฟังก์ชั่น</h3>
+						</div>
+						<br><br>
+					</section>
+				</center>
+				<!--HOME SECTION END-->
+				<section>
+					<div class="container">
+						<div class="row">
+							<div class="col-md-6">
+
+								<div class="alert alert-secondary">
+									<div id="group_from" class="form-group">
+										<strong>กรอกข้อมูลต่อไปนี้</strong>
+										<br />
+
+										<label></label>
+										<form action='Rootfinding' method="post">
+											{% csrf_token %}
+											เลือกฟังก์ชั่น
+											<select class="form-control" id="select" name='Rootfinding'
+												onchange="myFunctiongetselect()">
+												<option value="incremental">Incremental Search Method</option>
+												<option value="bisection">Bisection Method</option>
+												<option value="newton">Newton-Raphson Method</option>
+												<option value="secant">Secant Method</option>
+											</select>
+											ฟังก์ชั่น
+											<input name="fx" type="text" step=any class="form-control"
+												placeholder="3*x**3 - 10*x**2 + 5" value="3*x**3 - 10*x**2 + 5">
+											<div id="df"></div>
+											<br>
+											<input type="submit" class="btn btn-light"></input>
+										</form>
+									</div>
+								</div>
+							</div>
+							<center>
+								<div class="col-md-6">
+									<h2><strong> ผลลัพธ์ </strong></h2>
+									<h4>x = {{x}}</h4>
+								</div>
+							</center>
+						</div>
+					</div>
+				</section>
+
+				<script>
+					function myFunctiongetselect() {
+						var x = document.getElementById("select").value;
+						if (x == "newton") {
+							var paragraph = document.getElementById("df");
+							var text = document.createTextNode("ฟังก์ชั้นDif1ครั้ง");
+							paragraph.appendChild(text);
+							var x = document.createElement("INPUT");
+							x.setAttribute("id", "dx");
+							x.setAttribute("name", "dx");
+							x.setAttribute("class", "form-control");
+							x.setAttribute("type", "text");
+							x.setAttribute("placeholder", "9*x**2-20*x");
+							x.setAttribute("value", "9*x**2-20*x");
+							document.getElementById("df").appendChild(x);
+						} else {
+							var div = document.getElementById("dx");
+							div.parentNode.removeChild(div);
+						}
+					}
+				</script>
+
+		</section>
+		<!--FOOTER SECTION END-->
+		<div class="copy-txt">
+			<div class="container">
+				<div class="row">
+					{% comment %} <div class="col-md-12 set-foot">
+						&copy 2014 your domain | All rights reserved | Design by : <a href="http://www.binarytheme.com"
+							target="_blank" style="color:#7C7C7C;">binarytheme.com</a>
+					</div> {% endcomment %}
+				</div>
+			</div>
+		</div>
+		</section>
+
+
+	</div>
+
+	<!-- Bootstrap core JavaScript -->
+	<script src="{% static 'myapp/vendor/jquery/jquery.min.js' %}"></script>
+	<script src="{% static 'myapp/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+	<!-- Plugin JavaScript -->
+	<script src="{% static 'myapp/vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+	<!-- Custom scripts for this template -->
+	<script src="{% static 'myapp/js/resume.min.js' %}"></script>
+	{% load static %}
+</body>
+
+</html>
